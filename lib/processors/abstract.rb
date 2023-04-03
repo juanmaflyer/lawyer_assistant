@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative './abstract'
+
 module LawyerAssistant
   # Abstract class of a contract processor
   class AbstractContractProcessor
@@ -7,7 +9,7 @@ module LawyerAssistant
 
     # receives a contract and returns a contract
     def process(_contract)
-      raise 'method not implemented'
+      raise NotImplementedError
     end
   end
 end

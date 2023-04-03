@@ -6,12 +6,11 @@ require './lib/processors/words_count_logger'
 require './lib/processors/footer_adder'
 require './lib/processors/base64_encoder'
 
-contract = Contract.new('Juan', '13/03/1988', 'content of a contract')
+contract = Contract.new('Juan', '01/04/2023', 'content of a contract')
 
 cb = LawyerAssistant::ContractBuilder.new(contract) do
   use LawyerAssistant::WordsCountLoggerCP
-  # use Base64EncoderCP
-  # use FilePersisterCP
+  # use LawyerAssistant::FilePersisterCP
   use LawyerAssistant::FooterAdderCP
   use LawyerAssistant::WordsCountLoggerCP
   use LawyerAssistant::Base64EncoderCP

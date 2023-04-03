@@ -1,6 +1,13 @@
-class LawyerAssistant::FilePersisterCP < AbstractContractProcessor
-  def process(contract)
-    # persiste the contract to a file in disk
-    contract
+# frozen_string_literal: true
+
+require_relative './abstract'
+
+module LawyerAssistant
+  # Processor that persists the contract to a file
+  class FilePersisterCP < AbstractContractProcessor
+    def process(contract)
+      # persiste the contract to a file in disk
+      contract
+    end
   end
 end

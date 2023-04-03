@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 module LawyerAssistant
-  # add comment
+  # The ContractBuilder class is aimed to be use as the RackBuilder class. It recieves a contract and optionally
+  # it can use a number or processors that will modify the contract at will.
   class ContractBuilder
+    attr_accessor :contract, :processors
+
     def initialize(contract, &block)
       @contract = contract
       @processors = []
