@@ -7,6 +7,7 @@ module LawyerAssistant
   class FilePersisterCP < AbstractContractProcessor
     def process(contract)
       # persiste the contract to a file in disk
+      # File.write('contract.txt', contract.content)
       contract
     end
   end
